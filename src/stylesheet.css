@@ -1,0 +1,724 @@
+@font-face {
+    font-family: Birdy;
+    src: url("./Birdy.ttf");
+}
+
+
+html {
+    height: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Birdy, sans-serif;
+    background: rgba(21,32,43,1.00);
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+input {
+    width: 70%;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    background: rgb(29, 155, 240);
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.content {
+    width: 90%;
+    max-height: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid rgb(56, 68, 77) 2px;
+    background: rgba(21,32,43,1.00);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.contentmedia {
+    overflow: hidden;
+    max-width: 20vw;
+    height: auto;
+    align-self: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+}
+
+.trendingtag {
+    margin-bottom: 10px;
+}
+
+.contentlogo {
+    width: 30px;
+    height: 30px;
+}
+
+.contentinteractionlist {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.contenttext {
+    margin-bottom: 20px;
+    background: rgba(21,32,43,1.00);
+    font-weight: normal;
+}
+
+.contentprofile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(21,32,43,1.00);
+}
+
+.contentprofilepicture {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+
+.contentprofilename {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(21,32,43,1.00);
+
+}
+
+.trendingtag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trendingnumber {
+    font-size: 0.8rem;
+    color: #808080;
+}
+
+.friendpp {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+
+.friend {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+
+.friendname {
+    align-self: center;
+
+}
+
+.settingtitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.setting {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.settingtext {
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 10px;
+    height: 40px;
+    padding: 10px;
+    line-height: 40px;
+    resize: none;
+    width: 40%;
+}
+
+.settingsubmit {
+    height: 60px;
+    width: 20%;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid rgb(56, 68, 77);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    align-self: center;
+    justify-self: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.contentheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    background: rgba(21,32,43,1.00);
+}
+
+.contentdate {
+    align-items: center;
+    background: rgba(21,32,43,1.00);
+
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+
+
+.message {
+    width: 40%;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messagesent {
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.messagereceived {
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.result {
+    border: 1px solid rgb(56, 68, 77);
+    border-radius: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.formentry {
+    border: 2px solid rgb(56, 68, 77);
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    background: rgba(21,32,43,1.00);
+    margin-bottom: 5px;
+
+}
+
+.formentrylist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.refresh {
+    height: 50px;
+    width: 50px;
+}
+
+.refreshicon {
+   background: rgb(29, 155, 240);
+}
+
+.rotate {
+    animation: spin 1s;
+}
+
+.selectfile {
+    font-weight: bold;
+    margin: auto;
+    font-size: 15px;
+    max-width: 80px;
+    max-height: 40px;
+    overflow: hidden;
+
+}
+
+.post {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.friendrequest {
+    width: 100%;
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.conversationbutton {
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.envelopeicon {
+    background: rgb(29, 155, 240);
+}
+
+.friendmessage {
+    display: flex;
+    justify-content: center;
+}
+
+.leave {
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
+    background: none;
+}
+
+.settingscurrent {
+    width: 20%;
+}
+
+.settingsform {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.friendsettings {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.deletebutton {
+    margin-left: 50%;
+}
+
+#mainpage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#control {
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#contentpage {
+    width: 40vw;
+    height: 100%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(21,32,43,1.00);
+
+}
+
+#navigationbar {
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login {
+    width: 80%;
+    height: 20%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background: rgba(21,32,43,1.00);
+}
+
+#register {
+    width: 80%;
+    height: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(21,32,43,1.00);
+}
+
+#disconnect {
+    display: flex;
+    width: 80%;
+    height: 20%;
+    border-radius: 20px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(21,32,43,1.00);
+
+}
+
+.test {
+    background: red;
+}
+
+#settings {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#newpost {
+    height: 5vw;
+    max-height: 100px;
+    width: 95%;
+    border: solid rgb(56, 68, 77) 0.5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: grey;
+}
+
+#settingspage {
+    width: 40vw;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 20px;
+    margin-top: 3vw;
+    padding: 40px;
+}
+ #newpostpicture {
+     width: 50px;
+     height: 50px;
+     border-radius: 40px;
+     margin-right: 20px;
+ }
+
+ #newposttext {
+     border: none;
+     padding: 10px;
+     height: 60%;
+     width: 60%;
+     font-size: 1.5rem;
+ }
+
+
+ #trending {
+     width: 60%;
+     margin-top: 20px;
+     border: solid rgb(56, 68, 77) 0.5px;
+     border-radius: 20px;
+     padding: 20px;
+ }
+
+ #trendingtitle {
+     margin-bottom: 10px;
+     font-size: 1.2rem;
+     font-weight: bold;
+ }
+
+#messagelist {
+    width: 60%;
+    margin-top: 20px;
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(21,32,43,1.00);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#settingbio {
+    height: 20px;
+}
+
+#noposts {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputfile {
+    width: 0;
+}
+
+#contentlist {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(21,32,43,1.00);
+
+}
+
+
+#friendrequestscontainer{
+    width: 60%;
+    margin-top: 20px;
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#conversation {
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#conversation {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#conversationlist {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+#conversationlist::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+#messageform {
+    width: 90%;
+    border: solid rgb(56, 68, 77) 0.5px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: grey;
+
+
+}
+
+#messagetext {
+    border: none;
+    padding: 10px;
+    height: 60%;
+    font-size: 1.5rem;
+}
+
+#profile {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 20px;
+    padding: 30px;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+#searchbar {
+    width: 80%;
+    border: solid rgb(56, 68, 77) 0.5px;
+    height: 25px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(21,32,43,1.00);
+}
+
+#connexion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+#profileheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-bottom: 40px;
+}
+
+#explorecheckbox {
+    margin-bottom: 20px;
+}
+
+#friendrequestlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nofriends {
+    margin-bottom: 30px;
+}
+
+#endpostlist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+#profileheadername {
+    margin-right: 40px;
+}
+
+#headerprofilepicture {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-right: 40px;
+}
+
+#bio {
+    margin-bottom: 30px;
+}
+
+#place {
+    margin-bottom: 30px;
+}
+
+#profilefriends {
+    width: 40%;
+    margin-top: 20px;
+    border: solid rgb(56, 68, 77) 0.5px;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(21,32,43,1.00);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+#picturesettings {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-right: 40px;
+    align-self: center;
+}
+
+#changepicture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#selectfilesettings {
+    margin-right: 20px;
+}
+
+#nomessage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
